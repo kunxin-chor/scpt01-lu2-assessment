@@ -46,14 +46,14 @@ function deleteTask(todos, id) {
 }
 
 
-let todos = [];
-addTodo(todos, "Wash the car", 5);
-addTodo(todos, "Clean the toilet", 3);
-addTodo(todos, "Wash the floor", 1);
-console.log(todos);
+// let todos = [];
+// addTodo(todos, "Wash the car", 5);
+// addTodo(todos, "Clean the toilet", 3);
+// addTodo(todos, "Wash the floor", 1);
+// console.log(todos);
 
-modifyTask(todos, todos[0].id, "Wash the bicycle", 4);
-console.log(todos);
+// modifyTask(todos, todos[0].id, "Wash the bicycle", 4);
+// console.log(todos);
 
-deleteTask(todos, todos[2].id);
-console.log(todos);
+// deleteTask(todos, todos[2].id);
+// console.log(todos);
