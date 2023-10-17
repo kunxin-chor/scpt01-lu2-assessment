@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function(){
         // addTodo(todos, "Buy grocery", 3);
         renderTodos(todos);
        
-
         // attach all the event listeners
-        document.querySelector("#addTodo")
-            .addEventListener('click', function(){
+        document.querySelector("#todoForm")
+            .addEventListener('submit', function(event){
+                event.preventDefault(); // tells the browser do not execute the default behavior for the form
                 const taskNameElement = document.querySelector("#taskName");
                 const taskName = taskNameElement.value;
 
