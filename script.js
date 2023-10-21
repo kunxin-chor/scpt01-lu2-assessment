@@ -2,8 +2,10 @@
 // HTML elements in the web page has been created
 // we use it to define the entry point of our application
 document.addEventListener("DOMContentLoaded", function(){
-    function main(){
-        let todos = [];
+    
+    async function main(){
+
+        let todos =  await loadTasks();
         // addTodo(todos, "Walk the dog", 5);
         // addTodo(todos, "Clean the house", 3);
         // addTodo(todos, "Buy grocery", 3);
@@ -21,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 addTodo(todos, taskName, taskUrgency );
                 renderTodos(todos); // redraw the list of tasks
+            })
+
+        document.querySelector("#save-btn")
+            .addEventListener("click", async function(){
+                await saveTasks(todos);
+                alert("Tasks have been saved");
             })
         
     }
